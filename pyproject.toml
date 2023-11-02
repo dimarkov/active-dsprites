@@ -1,0 +1,27 @@
+[project]
+name = "active-dsprites"
+version = "0.1.0"
+description = "An interactive environment based on DSprites dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.txt"}
+authors = [
+  {name = "dimarkov", email = "5038100+dimarkov@users.noreply.github.com" }
+]
+
+dependencies = [ # Optional
+  "jax"
+]
+
+[project.urls] 
+"Source" = "https://github.com/dimarkov/active-dsprites"
+
+[tool.setuptools.package-data]
+"*" = ["*.npz"]
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,3 @@
+[submodule "src/dsprites-dataset"]
+	path = src/dsprites-dataset
+	url = git@github.com:google-deepmind/dsprites-dataset.git
