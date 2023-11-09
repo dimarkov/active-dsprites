@@ -37,7 +37,7 @@ class DSprites(object):
             encoding='bytes'
         )
 
-        self.imgs = jnp.expand_dims(data['imgs'], -3).astype(jnp.float32)
+        self.imgs = jnp.expand_dims(data['imgs'], -3).astype(jnp.float16)
         self.metadata = data['metadata'][()]
         self.state_sizes = self.metadata[b'latents_sizes']
         self.state_bases = jnp.concatenate((self.state_sizes[::-1].cumprod()[::-1][1:],
